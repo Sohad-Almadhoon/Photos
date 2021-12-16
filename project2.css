@@ -1,0 +1,689 @@
+/* 
+1-common style
+2-general style
+3-sections
+*------------*
+3.0-Header
+3.1-Home
+3.2-About
+3.3-Porfolio
+3.4-Services
+3.5-Price
+3.6-Team
+3.7-blog
+3.8-Contact
+3.9-Footer
+*/
+/* common
+1-opacity hover
+2-section header
+3-section padding
+4-hover effect1 (ltr)
+5-hover effect2 (top to bottom)
+6-container
+*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 1.0rem;
+   }
+  
+  ::-webkit-scrollbar-track {
+    border: 7px solid #232943;
+    box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #2F4F4F, #d7dde4);
+    border-radius: 1rem;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(270deg, #DCDCDC, #3d4a59, #9e4673);
+  }
+/* Header */
+header{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+
+}
+ header li a{
+    text-decoration: none;
+    display: block;
+    padding: 20px 10px;
+   color: white;
+}
+ .nav li{
+    list-style-type: none;
+    text-align: right;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+}
+/* Home Section */
+.home-content{
+    text-align: center;
+    width: 65%;
+    margin: 100px auto;
+    position: absolute;
+    right:300px;
+    top:250px;
+
+}
+.title{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 3.0rem;
+    margin-bottom: 20px;
+    display: block;
+    text-transform: uppercase;
+    animation: letter 6s infinite;
+}
+@keyframes letter {
+    0%,100%{
+        letter-spacing:2px;
+    }
+50% {letter-spacing:5px;
+}}
+.home{
+ height: 110vh;   
+ background-image: url(./images/background/5195ebb8c5f9772deda82aa2937134d3.jpg);
+ position: relative;
+ background-size: cover;
+}
+.home-dec{ 
+    color: white;
+margin: 20px 0;
+letter-spacing: 2px;
+line-height: 1.5;
+}
+.over-lay{
+    background-color: #1b1b1b;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+button{
+    font-size: inherit;
+}
+.btn{
+    width: 160px;
+    padding: 20px 15px;
+    border: unset;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 20px;
+    animation: buton 5s infinite;
+    border: #1b1b1b solid 1px;
+}
+@keyframes buton {
+    0%,100%{
+      border-radius: 15px;
+    }
+50% {border-radius: 0;
+}}
+.more{
+    margin-left: 25px;
+    color: white;
+    background-color: rgb(51, 102, 168);
+}
+.opacity-hover:hover{
+    opacity: .7;
+    transition: opacity .8s;
+}
+header .nav  li a.line{
+    display: block;
+    font-size: 18px;
+     padding: 30px 15px;
+
+}
+header .nav  li a.line::after{
+    content: " ";
+    display: block;
+    width:0;
+    height: 3px;
+    background-color:steelblue;
+    transition: width .5s;
+}
+
+header .nav  li a.line:hover:after{
+    width: 100%;
+}
+header{
+    animation: move 1s 1;
+}
+@keyframes move {
+    0%{
+     transform: translatey(-150px);
+    }
+100% {transform: translatey(0px);
+}
+}
+.blog-list{
+    position: absolute;
+    top:63px;
+    right: 180px;
+    background-color: steelblue;
+    padding: 8px 12px;
+}
+.blogg{
+     display: none; 
+}
+.blogg:hover{
+    display: none; 
+}
+.blog:hover .blogg {
+  display: block;
+}
+/* Section welcome */
+.titlee{
+    display: block;
+    margin: auto;
+    margin-bottom:15px;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 2.5px;
+}
+.padd {
+    padding: 120px 0  ;
+}
+.linee{
+    width: 60px;
+    height: 4px;
+    background-color:steelblue;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.part{
+    width: 30%;
+    height: 55vh;
+    border: slategrey 1px solid;
+    padding: 18px 27px;
+    box-shadow: 4px 0px 20px rgb(179, 166, 166);
+}
+.hover-part{
+    position: relative; 
+}
+.hover-part::after{
+    content: " ";
+    width: 0;
+    position: absolute;
+    top: 0;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    background: #1b1b1b;
+    transition: width .5s;
+    z-index: -1;
+}
+.hover-part:hover::after{
+width: 100%;
+}
+.part:hover .abot h3 {
+    color: #f1f1f1;
+}
+.part:hover .abot p{
+    color:#ccc;
+}
+.part:hover .abot .read {
+    color: #f2f2f2;
+}
+.read{
+    font-size: 20px; 
+    margin-top: 15px; 
+    color: rgb(49, 49, 119);
+    display: block;
+}
+.aboutt{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+/* icons */
+.fa-cogs,.fa-magic,.fa-mobile-alt,.fa-search,.fa-edit{
+    color: rgb(99, 128, 212);
+    font-size: 39px;
+    padding: 13px;
+}
+.fa-gem,.fa-rocket, .abot-work .fa-cogs,.fa-gem,.fa-pen,.fa-flask{
+    font-size: 35px;
+    color: rgb(99, 128, 212);
+    position: absolute;
+    left:25px;
+    top:38px;
+}
+.fa-search,.fa-edit{
+    font-size: 30px;
+    color: white;
+
+}
+.fa-check-circle{
+ padding: 7px 10px;   
+ font-size: 30px;
+ color: black;
+}
+.fa-users,.fa-trophy,.fa-coffee,.fa-file{
+    color: royalblue;
+    padding: 10px ;  
+    font-size: 30px;
+}
+.fa-dollar-sign{
+    font-weight: bold;
+    font-size: 30px;
+}
+.fa-facebook-square,.fa-twitter-square,.fa-linkedin{
+    color: white;
+    font-size: 23px;
+    display: block;
+    background: #3968c5;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    padding-top: 15px;
+    transition: color 0.5s, background-color 0.5s, border-radius 0.5s;
+}
+.fa-facebook-square:hover,.fa-twitter-square:hover,.fa-linkedin:hover{
+    border-radius: 50%; 
+   color: #3968c5;
+    background-color: white;
+}
+/* ----- */
+.abot{
+    padding: 25px;
+    margin-top: 15px;
+
+}
+.h3{
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+/* portofolio */
+.images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    height: 120vh;
+    
+}
+.imgg{
+    width: 100%;
+    height: 100%;
+}
+.partt{
+    width: 30%;
+    height: 50vh;
+  border: solid 3px rgb(197, 195, 195);
+  
+}
+.picture{
+    background-color: #f9f9f9;
+}
+.partt{
+    position: relative; 
+    padding: 20px;
+    display: flex;
+    text-align: center;
+}
+.lay-hover{
+    visibility: hidden;
+    transition: padding .5s;
+}
+.partt:hover .lay-hover{
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    background-color: rgb(0, 0, 0,.5);
+    color: white;
+    text-transform: capitalize;
+    padding:90px 0;
+}
+/* what we offer */
+.abot-work{
+    width: 32%;
+    height: 35vh;
+  border: solid 1px rgb(197, 195, 195);
+  text-align: center;
+  padding: 0 50px;
+  position: relative;
+}
+.fath-work{
+    width: 80%;
+    margin: auto;
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.work{
+margin-top: 45px;
+}
+.fath-work .abot-work:hover{
+    color: whitesmoke;
+
+}
+/* service */
+.service-father{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    height: 120vh;
+}
+.service-part{
+    width: 50%;
+    padding: 50px; 
+}
+.service{
+    background-color: #f9f9f9;
+    height:120vh;
+}
+.service-list{
+  padding: 30px 0;
+  list-style: none;
+}
+.service-list li{
+  margin-top:5px ;
+  color: #999;
+  font-size: 17px;
+  }
+  .service-part p{
+      line-height: 1.6;
+      color: #999;
+  }
+ .service-part .titlee{
+text-align: left;
+  }
+  .service-part .linee{
+    text-align:end;
+    margin-left: 5px;
+  }
+  .ser-img{
+      margin-top: 7px;
+      border-radius: 5px;
+  }
+  /* numbers */
+  .numbers{
+      width: 100%;
+  }
+  .con-num{
+      text-align: center;
+      width: 25%;
+     padding: 90px 0;
+    color: white;
+  }
+  .con-num p{
+      line-height: 1.7;
+  }
+  .numbers{
+     background-position:center;
+      background-image: url(./images/background/background2.webp);
+      background-size: cover;
+      position: relative;
+      height: 300px;
+      background-attachment: fixed;
+  }
+  .over-layy{
+    background-color: #1b1b1b;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.num{
+    display: flex;
+    justify-content: space-around;
+}
+/* Prices */
+.price{
+display: flex;
+justify-content: space-around;
+width: 80%;
+margin: auto;
+height: 70vh;
+}
+.part-price{
+width: 28%;
+border: 2px solid #e8e8e8;
+text-align: center;
+border-radius: 10px;
+margin: 30px;
+}
+.part-price .title-part{
+    display: block;
+    margin-top: 35px;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #6195ff;
+}
+.dolar{
+    
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+.radius{
+    border: 2px solid #6195ff;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 20px auto;
+    padding: 20px 0;
+    font-weight: bolder;
+}
+.part-price ul{
+    list-style: none;
+    line-height: 1.5;
+    color: darkgrey;
+}
+.purchase{
+    border: 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+    border: dodgerblue 2px solid;
+    background-color: transparent;
+    text-transform: capitalize;
+}
+.hover-effect-tb{
+position: relative;
+}
+.hover-effect-tb:after {
+    position: absolute;
+    content: "";
+    background-color: #252525;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.hover-effect-tb:hover::after{
+    height: 100%; 
+    width: 100%;
+}
+.hover-effect-tb:hover{
+    color: white;
+}
+.hover-effect-tb:hover .purchase{
+    color: white;
+} 
+.hover-effect-tb:after {
+    transition: height 0.8s;
+}
+/* testominal */
+.back2{
+    background-position:center;
+    background-image: url(./images/background/background3.webp);
+    background-size: cover;
+    position: relative;
+    height:50vh;
+    background-attachment: fixed;
+    margin-bottom: 100px;
+}
+.span-back{
+    text-transform: uppercase;
+    color: #6195ff;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 12px 10px;
+}
+.back-fath{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+.back2-part{
+    width: 50%;
+    color: white;
+    margin: 0 auto;
+    padding: 25px 30px;
+}
+.img-test{
+    border-radius: 50%;
+    padding: 10px;
+}
+.back-img{
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+.t-back{
+    color: white;
+    margin: 0 12px 10px;
+    font-size: 20px;
+    margin-top: 15px;
+}
+.span-back{
+    font-size: 10px;
+}
+.p-back{
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px 15px;
+}
+
+/* footer  */
+footer{
+    background-color: #2F4F4F;
+    text-align: center;
+    padding: 60px 0;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px;
+}
+.social-media li{
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+.social-media li a{
+    color: white;
+    text-decoration: none;
+}
+.footer-copy{
+    color: #DCDCDC;
+}
+/* form */
+.contant-container{
+display: flex;
+width: 80%;
+    margin: auto;
+}
+.contact-coord{
+	width: 35%;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.contact-coord i{
+	color: #719ffc;
+    font-size: 40px;
+}
+
+.contact-coord h3 {
+	margin: 20px 0;
+}
+
+.contact-coord span {
+	color: #999;
+}
+
+.contact-input {
+	width: 70%;
+	margin: 0 auto;
+}
+	
+.contact-input .name {
+	width: 48%;
+	margin-right: 3%;
+	
+}
+
+.contact-input .email {
+	width: 48%;
+}
+
+.contact-input .subject {
+	margin: 10px 0;
+	width: 100%;
+	
+}
+
+.contact-input .message {
+	margin: 10px 0 20px 0;	
+	width: 100%;
+}
+
+.contact-input .btn {
+	padding: 15px 0;
+	width: 180px;
+	background-color: #6195ff;
+	color: white;
+	font-size: 16px;
+	border-radius: 4px;
+	border: none;
+	display:block;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.contact-input .btn:hover {
+	background-color: #999;
+}
+
+.contact-input .name,
+.contact-input .email,
+.contact-input .subject,
+.contact-input .message {
+	background-color: #f4f4f4;
+	border: none;
+	border-bottom: 2px solid #eee;
+	font-size: 17px;
+	padding: 12px;
+	opacity: 0.6;
+}
